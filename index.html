@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ikstone cv</title>
+<meta name="description" content="Futuristic Cyberpunk CV - Neon Glow Portfolio" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============ LOADING SCREEN ============ -->
+<div id="loader">
+  <div class="loader-content">
+    <div class="hex-loader"></div>
+    <div class="loader-text">
+      <span class="glitch" data-text="INITIALIZING SYSTEM">INITIALIZING SYSTEM</span>
+    </div>
+    <div class="loader-bar"><div class="loader-progress"></div></div>
+    <div class="loader-percent">0%</div>
+  </div>
+</div>
+
+<!-- ============ CURSOR GLOW ============ -->
+<div class="cursor-glow"></div>
+<div class="cursor-dot"></div>
+
+<!-- ============ PARTICLES CANVAS ============ -->
+<canvas id="particles"></canvas>
+
+<!-- ============ MUSIC TOGGLE ============ -->
+<button class="music-btn" id="musicBtn" title="Toggle Music">
+  <i class="fas fa-volume-xmark"></i>
+</button>
+<audio id="bgMusic" autoplay controls loop>
+  <source src="WhatsApp Audio 2026-06-24 at 18.25.37.mpeg" type="audio/mpeg">
+</audio>
+
+<!-- ============ NAVIGATION ============ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="logo">
+      <span class="logo-bracket">[</span>
+      <span class="logo-text">IKSTONE</span>
+      <span class="logo-bracket">]</span>
+      <span class="logo-dot">.</span>
+      <span class="logo-sub">CV</span>
+    </a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home" class="nav-link"><span class="nav-num">01.</span>Home</a></li>
+      <li><a href="#about" class="nav-link"><span class="nav-num">02.</span>About</a></li>
+      <li><a href="#skills" class="nav-link"><span class="nav-num">03.</span>Skills</a></li>
+      <li><a href="#experience" class="nav-link"><span class="nav-num">04.</span>Experience</a></li>
+      <li><a href="#portfolio" class="nav-link"><span class="nav-num">05.</span>Portfolio</a></li>
+      <li><a href="#contact" class="nav-link"><span class="nav-num">06.</span>Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ============ HERO SECTION ============ -->
+<section class="hero" id="home">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-left reveal">
+      <div class="hero-tag">
+        <span class="tag-line"></span>
+        <span class="tag-text">SYSTEM ONLINE // WELCOME</span>
+      </div>
+      <h1 class="hero-name">
+        <span class="name-line">RIZQI</span>
+        <span class="name-line neon-text">NUR RAHMANSYAH</span>
+      </h1>
+      <div class="hero-role">
+        <span class="role-prefix">&gt;_</span>
+        <span class="role-text" id="typingText"></span>
+        <span class="role-cursor">|</span>
+      </div>
+      <p class="hero-desc">
+        Membangun pengalaman digital masa depan dengan kode, kreativitas, dan teknologi terdepan.
+        Mengubah ide menjadi antarmuka yang hidup dan bercahaya.
+      </p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/qr/45OMB5WGJYIQK1" class="btn btn-primary">
+          <i class="fas fa-bolt"></i>
+          <span>HUBUNGI SAYA</span>
+        </a>
+        <a href="assets/cv.pdf" download class="btn btn-outline">
+          <i class="fas fa-download"></i>
+          <span>DOWNLOAD CV</span>
+        </a>
+      </div>
+      <div class="hero-socials">
+        <a href="#" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" class="social-icon" title="Dribbble"><i class="fab fa-dribbble"></i></a>
+      </div>
+    </div>
+    <div class="hero-right reveal">
+      <div class="profile-frame">
+        <div class="frame-corner tl"></div>
+        <div class="frame-corner tr"></div>
+        <div class="frame-corner bl"></div>
+        <div class="frame-corner br"></div>
+        <div class="profile-glow"></div>
+        <div class="profile-img">
+          <img src="WhatsApp Image 2026-06-24 at 17.58.10.jpeg" alt="Profile" />
+          <div class="scan-line"></div>
+        </div>
+        <div class="profile-status">
+          <span class="status-dot"></span>
+          <span>IKSTONE HACKER SEJATI</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>SCROLL</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT SECTION ============ -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">&lt;ABOUT_ME/&gt;</div>
+      <h2 class="section-title">TENTANG <span class="neon-text">SAYA</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <h3 class="about-subtitle">// WHO AM I</h3>
+        <p>
+          Saya adalah seorang <span class="highlight">FRONT END</span> & 
+          <span class="highlight">UI/UX Designer</span> dengan passion mendalam terhadap 
+          teknologi futuristik dan desain cyberpunk. Berpengalaman lebih dari 5 tahun 
+          membangun aplikasi web modern dengan fokus pada performa, estetika, dan user experience.
+        </p>
+        <p>
+          Saya percaya bahwa kode adalah seni, dan setiap baris harus memiliki tujuan. 
+          Mari berkolaborasi menciptakan sesuatu yang luar biasa.
+        </p>
+        <div class="about-stats">
+          <div class="stat">
+            <div class="stat-num" data-count="30">0</div>
+            <div class="stat-label">PROJECTS</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-count="1">0</div>
+            <div class="stat-label">CLIENTS</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-count="5">0</div>
+            <div class="stat-label">YEARS EXP</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-count="15">0</div>
+            <div class="stat-label">AWARDS</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-info reveal">
+        <div class="info-card glass">
+          <h4><i class="fas fa-id-card"></i> DATA DIRI</h4>
+          <ul class="info-list">
+            <li><span class="info-key">Nama Lengkap</span><span class="info-val">Rizqi Nur Rahmansyah</span></li>
+            <li><span class="info-key">Umur</span><span class="info-val">16 Tahun</span></li>
+            <li><span class="info-key">Jenis Kelamin</span><span class="info-val">Laki-laki</span></li>
+            <li><span class="info-key">Status</span><span class="info-val">Single</span></li>
+            <li><span class="info-key">Kewarganegaraan</span><span class="info-val">Indonesia</span></li>
+            <li><span class="info-key">Agama</span><span class="info-val">Islam</span></li>
+          </ul>
+        </div>
+        <div class="info-card glass">
+          <h4><i class="fas fa-location-dot"></i> KONTAK</h4>
+          <ul class="info-list">
+            <li><span class="info-key">Alamat</span><span class="info-val">Gg. Saritas VI</span></li>
+            <li><span class="info-key">Email</span><span class="info-val">rizqinurrahmansyahh@gmail,com</span></li>
+            <li><span class="info-key">Telepon</span><span class="info-val">+62 813-8921-2618</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION SECTION ============ -->
+<section class="section education">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">&lt;EDUCATION/&gt;</div>
+      <h2 class="section-title">PENDIDIKAN <span class="neon-text">FORMAL</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass">
+          <div class="timeline-year">2022 - 2025</div>
+          <h3>ILMU PEMBELAJARAN</h3>
+          <h4>SMPIT GLOBAL MADANI</h4>
+          <p>AKtif Di bidang Organisasi</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass">
+          <div class="timeline-year">2014 - 2017</div>
+          <h3>SMK JURUSAN RPL</h3>
+          <h4>SMK TARUNA BANGSA</h4>
+          <p>Aktif di Bidang IT & Lulus sertificate W3School.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS SECTION ============ -->
+<section class="section skills" id="skills">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">&lt;SKILLS/&gt;</div>
+      <h2 class="section-title">KEAHLIAN <span class="neon-text">TEKNIKAL</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-col reveal">
+        <h3 class="skill-cat"><i class="fas fa-code"></i> Frontend</h3>
+        <div class="skill-item">
+          <div class="skill-head"><span>HTML5 / CSS</span><span class="skill-pct">80%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-head"><span>JavaScript</span><span class="skill-pct">20%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="20"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-head"><span>My SQL</span><span class="skill-pct">95%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-head"><span>Free Pascal</span><span class="skill-pct">70%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-head"><span>EXCEL & WORD</span><span class="skill-pct">75%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-col reveal">
+        <h3 class="skill-cat"><i class="fas fa-server"></i> Backend</h3>
+        <div class="skill-item">
+          <div class="skill-head"><span>Node.js / Express</span><span class="skill-pct">87%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="87"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-head"><span>Python / Django</span><span class="skill-pct">82%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-head"><span>PHP / Laravel</span><span class="skill-pct">78%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-head"><span>MongoDB / PostgreSQL</span><span class="skill-pct">85%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-head"><span>Firebase / Supabase</span><span class="skill-pct">88%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-col reveal">
+        <h3 class="skill-cat"><i class="fas fa-palette"></i> Design & Tools</h3>
+        <div class="skill-item">
+          <div class="skill-head"><span>Figma / Adobe XD</span><span class="skill-pct">90%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-head"><span>Photoshop / Illustrator</span><span class="skill-pct">83%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="83"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-head"><span>Git / GitHub</span><span class="skill-pct">92%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-head"><span>Docker / AWS</span><span class="skill-pct">75%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-head"><span>Three.js / WebGL</span><span class="skill-pct">70%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <div class="languages reveal">
+      <h3 class="skill-cat" style="text-align:center;margin-bottom:30px"><i class="fas fa-language"></i> BAHASA</h3>
+      <div class="lang-grid">
+        <div class="lang-card glass">
+          <div class="lang-circle" data-pct="98">
+            <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="45"></circle><circle cx="50" cy="50" r="45" class="lang-prog"></circle></svg>
+            <div class="lang-pct">98%</div>
+          </div>
+          <h4>Indonesia</h4>
+          <p>Native</p>
+        </div>
+        <div class="lang-card glass">
+          <div class="lang-circle" data-pct="90">
+            <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="45"></circle><circle cx="50" cy="50" r="45" class="lang-prog"></circle></svg>
+            <div class="lang-pct">50%</div>
+          </div>
+          <h4>English</h4>
+          <p>Professional</p>
+        </div>
+        <div class="lang-card glass">
+          <div class="lang-circle" data-pct="60">
+            <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="45"></circle><circle cx="50" cy="50" r="45" class="lang-prog"></circle></svg>
+            <div class="lang-pct">60%</div>
+          </div>
+          <h4>日本語</h4>
+          <p>Intermediate</p>
+        </div>
+        <div class="lang-card glass">
+          <div class="lang-circle" data-pct="45">
+            <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="45"></circle><circle cx="50" cy="50" r="45" class="lang-prog"></circle></svg>
+            <div class="lang-pct">45%</div>
+          </div>
+          <h4>العربية</h4>
+          <p>Basic</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE SECTION ============ -->
+<section class="section experience" id="experience">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">&lt;EXPERIENCE/&gt;</div>
+      <h2 class="section-title">PENGALAMAN <span class="neon-text">KERJA</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="exp-timeline">
+      <div class="exp-item reveal">
+        <div class="exp-date">2023 - NOW</div>
+        <div class="exp-card glass">
+          <div class="exp-head">
+            <h3>Front End Developer</h3>
+            <h4><i class="fas fa-building"></i> PT. CEO IKSTONE STORE</h4>
+          </div>
+          <p>Memimpin tim pengembangan 8 developer untuk membangun platform SaaS enterprise. Mengimplementasikan arsitektur microservices dan CI/CD pipeline yang meningkatkan deployment speed 300%.</p>
+          <div class="exp-tags">
+            <span>React</span><span>Node.js</span><span>AWS</span><span>Docker</span>
+          </div>
+        </div>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-date">2021 - 2023</div>
+        <div class="exp-card glass">
+          <div class="exp-head">
+            <h3>Frontend Developer</h3>
+            <h4><i class="fas fa-building"></i> Startup Digital Nusantara</h4>
+          </div>
+          <p>Mengembangkan 15+ landing page dan web app dengan fokus pada performa dan aksesibilitas. Berhasil meningkatkan conversion rate hingga 45% melalui optimasi UX.</p>
+          <div class="exp-tags">
+            <span>Vue.js</span><span>Nuxt</span><span>Tailwind</span><span>Firebase</span>
+          </div>
+        </div>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-date">2020 - 2021</div>
+        <div class="exp-card glass">
+          <div class="exp-head">
+            <h3>UI/UX Designer</h3>
+            <h4><i class="fas fa-building"></i> Creative Agency Jakarta</h4>
+          </div>
+          <p>Merancang user interface untuk 20+ klien dari berbagai industri. Spesialisasi dalam desain futuristik, glassmorphism, dan motion design.</p>
+          <div class="exp-tags">
+            <span>Figma</span><span>Adobe XD</span><span>Photoshop</span><span>After Effects</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATES SECTION ============ -->
+<section class="section certificates">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">&lt;CERTIFICATES/&gt;</div>
+      <h2 class="section-title">SERTIFIKAT <span class="neon-text">PRESTASI</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="cert-grid">
+      <div class="cert-card glass reveal">
+        <div class="cert-icon"><i class="fab fa-aws"></i></div>
+        <h4>HTML DASAR</h4>
+        <p>Skillvul · 2025</p>
+      </div>
+      <div class="cert-card glass reveal">
+        <div class="cert-icon"><i class="fab fa-google"></i></div>
+        <h4>Google UX Design Professional</h4>
+        <p>Google · 2023</p>
+      </div>
+      <div class="cert-card glass reveal">
+        <div class="cert-icon"><i class="fab fa-meta"></i></div>
+        <h4>Meta Frontend Developer</h4>
+        <p>Meta · 2023</p>
+      </div>
+      <div class="cert-card glass reveal">
+        <div class="cert-icon"><i class="fas fa-shield-halved"></i></div>
+        <h4>Certified Ethical Hacker</h4>
+        <p>EC-Council · 2022</p>
+      </div>
+      <div class="cert-card glass reveal">
+        <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
+        <h4>Azure Fundamentals</h4>
+        <p>Microsoft · 2022</p>
+      </div>
+      <div class="cert-card glass reveal">
+        <div class="cert-icon"><i class="fas fa-robot"></i></div>
+        <h4>TensorFlow Developer</h4>
+        <p>Google · 2021</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTFOLIO SECTION ============ -->
+<section class="section portfolio" id="portfolio">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">&lt;PORTFOLIO/&gt;</div>
+      <h2 class="section-title">PROJECT <span class="neon-text">TERBARU</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-card reveal">
+        <div class="portfolio-img">
+          <img src="WhatsApp Image 2026-06-24 at 17.58.10.jpeg" alt="Project 1">
+          <div class="portfolio-overlay">
+            <a href="#" class="portfolio-link"><i class="fas fa-eye"></i></a>
+            <a href="#" class="portfolio-link"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="portfolio-info glass">
+          <h4>Neon Dashboard</h4>
+          <p>Admin dashboard futuristik dengan real-time analytics</p>
+          <div class="portfolio-tags"><span>React</span><span>D3.js</span><span>Node</span></div>
+        </div>
+      </div>
+      <div class="portfolio-card reveal">
+        <div class="portfolio-img">
+          <img src="WhatsApp Image 2026-06-24 at 17.58.10.jpeg" alt="Project 2">
+          <div class="portfolio-overlay">
+            <a href="#" class="portfolio-link"><i class="fas fa-eye"></i></a>
+            <a href="#" class="portfolio-link"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="portfolio-info glass">
+          <h4>Cyber E-Commerce</h4>
+          <p>Platform e-commerce dengan UI cyberpunk & AR preview</p>
+          <div class="portfolio-tags"><span>Next.js</span><span>Stripe</span><span>Three.js</span></div>
+        </div>
+      </div>
+      <div class="portfolio-card reveal">
+        <div class="portfolio-img">
+          <img src="WhatsApp Image 2026-06-24 at 17.58.10.jpeg" alt="Project 3">
+          <div class="portfolio-overlay">
+            <a href="#" class="portfolio-link"><i class="fas fa-eye"></i></a>
+            <a href="#" class="portfolio-link"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="portfolio-info glass">
+          <h4>AI Chat Assistant</h4>
+          <p>Chatbot AI dengan natural language processing</p>
+          <div class="portfolio-tags"><span>Python</span><span>OpenAI</span><span>FastAPI</span></div>
+        </div>
+      </div>
+      <div class="portfolio-card reveal">
+        <div class="portfolio-img">
+          <img src="WhatsApp Image 2026-06-24 at 17.58.10.jpeg" alt="Project 4">
+          <div class="portfolio-overlay">
+            <a href="#" class="portfolio-link"><i class="fas fa-eye"></i></a>
+            <a href="#" class="portfolio-link"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="portfolio-info glass">
+          <h4>Blockchain Wallet</h4>
+          <p>Crypto wallet dengan UI futuristik & multi-chain</p>
+          <div class="portfolio-tags"><span>Web3</span><span>Solidity</span><span>React</span></div>
+        </div>
+      </div>
+      <div class="portfolio-card reveal">
+        <div class="portfolio-img">
+          <img src="WhatsApp Image 2026-06-24 at 17.58.10.jpeg" alt="Project 5">
+          <div class="portfolio-overlay">
+            <a href="#" class="portfolio-link"><i class="fas fa-eye"></i></a>
+            <a href="#" class="portfolio-link"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="portfolio-info glass">
+          <h4>SaaS Landing Page</h4>
+          <p>Landing page modern dengan animasi scroll kompleks</p>
+          <div class="portfolio-tags"><span>GSAP</span><span>Vue</span><span>SASS</span></div>
+        </div>
+      </div>
+      <div class="portfolio-card reveal">
+        <div class="portfolio-img">
+          <img src="WhatsApp Image 2026-06-24 at 17.58.10.jpeg" alt="Project 6">
+          <div class="portfolio-overlay">
+            <a href="#" class="portfolio-link"><i class="fas fa-eye"></i></a>
+            <a href="#" class="portfolio-link"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="portfolio-info glass">
+          <h4>IoT Control Panel</h4>
+          <p>Dashboard IoT real-time monitoring & automation</p>
+          <div class="portfolio-tags"><span>MQTT</span><span>React</span><span>Chart.js</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT SECTION ============ -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">&lt;CONTACT/&gt;</div>
+      <h2 class="section-title">MARI <span class="neon-text">TERHUBUNG</span></h2>
+      <div class="section-line"></div>
+      <p class="section-desc">Punya project menarik? Mari berkolaborasi menciptakan sesuatu yang luar biasa.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-card glass">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <h4>Email</h4>
+          <p>rizqinurrahmansyahh@gmail.com</p>
+        </div>
+        <div class="contact-card glass">
+          <div class="contact-icon"><i class="fas fa-phone"></i></div>
+          <h4>Telepon</h4>
+          <p>+62 813-8921-2618</p>
+        </div>
+        <div class="contact-card glass">
+          <div class="contact-icon"><i class="fas fa-location-dot"></i></div>
+          <h4>Lokasi</h4>
+          <p>Bekasi, Indonesia</p>
+        </div>
+        <a href="https://wa.me/6281389212618" target="_blank" class="btn btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+          <span>CHAT VIA WHATSAPP</span>
+        </a>
+      </div>
+
+      <form class="contact-form glass reveal" id="contactForm">
+        <h3>// KIRIM PESAN</h3>
+        <div class="form-group">
+          <input type="text" id="name" required>
+          <label for="name">Nama Lengkap</label>
+          <span class="form-line"></span>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" required>
+          <label for="email">Email</label>
+          <span class="form-line"></span>
+        </div>
+        <div class="form-group">
+          <input type="text" id="subject" required>
+          <label for="subject">Subjek</label>
+          <span class="form-line"></span>
+        </div>
+        <div class="form-group">
+          <textarea id="message" rows="5" required></textarea>
+          <label for="message">Pesan</label>
+          <span class="form-line"></span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          <i class="fas fa-paper-plane"></i>
+          <span>KIRIM PESAN</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="#home" class="logo">
+          <span class="logo-bracket">[</span>
+          <span class="logo-text">NEON</span>
+          <span class="logo-bracket">]</span>
+          <span class="logo-dot">.</span>
+          <span class="logo-sub">CV</span>
+        </a>
+        <p>Membangun masa depan digital dengan kode & kreativitas tanpa batas.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">UI/UX Design</a></li>
+          <li><a href="#">Mobile App</a></li>
+          <li><a href="#">Consulting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Me</h4>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/rizqirahmansyahh?igsh=NDdzbXJmNG1mYmgy"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 NEON.CV — Designed & Built with <span class="neon-text">♥</span> by Andi Pratama</p>
+      <p class="footer-sys">[ SYSTEM STATUS: <span class="online-dot"></span> ONLINE ]</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/6281389212618" target="_blank" class="fab-whatsapp" title="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span class="fab-pulse"></span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
